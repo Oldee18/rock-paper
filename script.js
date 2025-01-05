@@ -37,12 +37,36 @@ let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLower
             console.log("You lose!")
             ++computerScore;
         } else if (humanChoice === "rock" && computerChoice > 0.66) {
-            console.log("You win")
+            console.log("You win!")
             ++humanScore;
         }
         
+        // Human chose PAPER!
+
+        if (humanChoice === "paper" && computerChoice <= 0.33) {
+            console.log("You win!");
+            ++humanScore;
+        } else if (humanChoice === "paper" && (computerChoice > 0.33 && computerChoice <= 0.66)) {
+            console.log("It's a tie!");
+        } else if (humanChoice === "paper" && computerChoice > 0.66) {
+            console.log("You lose!");
+            ++computerScore;
+        }
+
+        // Human chose SCISSORS!
+
+        if (humanChoice === "scissors" && computerChoice <= 0.33) {
+            console.log("You lose");
+            ++computerScore;
+        } else if (humanChoice === "scissors" && (computerChoice > 0.33 && computerChoice <= 0.66)) {
+            console.log("You win!");
+            ++humanScore;
+        } else if (humanChoice === "scissors" && computerChoice > 0.66) {
+            console.log("It's a tie!");
+        }
     }
-    
+
+
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice();
 playRound(humanSelection, computerSelection);

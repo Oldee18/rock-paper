@@ -1,8 +1,12 @@
-let choices = ("rock", "paper", "scissors");
 let humanScore = 0;
 let computerScore = 0;
+
+function playGame() {
+
+
 let computerChoice = Math.random();
 let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
+
 
 
     function getComputerChoice() {
@@ -29,6 +33,9 @@ let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLower
 
 
     function playRound(humanSelection, computerSelection) {
+
+        
+
         // Human chose ROCK!
 
         if (humanChoice === "rock" && computerChoice <= 0.33) {
@@ -64,11 +71,26 @@ let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLower
         } else if (humanChoice === "scissors" && computerChoice > 0.66) {
             console.log("It's a tie!");
         }
+        console.log("Your score is " + humanScore);
+        console.log("Computer score is " + computerScore);
     }
 
+    let humanSelection = getHumanChoice();
+    let computerSelection = getComputerChoice();
+  playRound(humanSelection, computerSelection);
+}
+playGame();
+playGame();
+playGame();
+playGame();
+playGame();
+console.log("Your finale score is " + humanScore);
+console.log("Computer finale score is " + computerScore);
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-playRound(humanSelection, computerSelection);
-console.log("Your score is " + humanScore);
-console.log("Computer score is " + computerScore);
+    if (humanScore > computerScore) {
+        console.log("YOU ARE THE WINNER!!!");
+    } else if (humanScore === computerScore) {
+        console.log("IT'S A TIE!!! MAYBE NEXT TIME");
+    } else if (humanScore < computerScore) {
+        console.log("YOU ARE THE LOSER!!! GOOD LUCK NEXT TIME");
+    }

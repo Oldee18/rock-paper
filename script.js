@@ -1,29 +1,50 @@
 let choices = ("rock", "paper", "scissors");
 let humanScore = 0;
 let computerScore = 0;
+let computerChoice = Math.random();
+let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
+
 
     function getComputerChoice() {
         
-        let computerChoice = Math.random();
             if (computerChoice <= 0.33) {
                 console.log("The computer chose " + "rock".toUpperCase());
             } else if (computerChoice > 0.33 && computerChoice <= 0.66){
                 console.log("The computer chose " + "paper".toUpperCase());
             } else if (computerChoice > 0.66) 
                 console.log("The computer chose " + "scissors".toUpperCase());
-            }
+    }
 
 
 
     function getHumanChoice() {
 
-        let humanChoice = prompt("What is your choice?").toLocaleLowerCase();
             if (humanChoice === "rock" || humanChoice === "paper" || humanChoice === "scissors") {
-                console.log("You chose " + humanChoice);
+                console.log("You chose " + humanChoice.toUpperCase());
             } else {
                 console.log("This choice was not part of the game!!! Choice another!")
             }
     }
 
-getHumanChoice()
-getComputerChoice()
+
+
+    function playRound(humanSelection, computerSelection) {
+        // Human chose ROCK!
+
+        if (humanChoice === "rock" && computerChoice <= 0.33) {
+            console.log("It's a tie!");
+        } else if (humanChoice === "rock" && (computerChoice > 0.33 && computerChoice <= 0.66)) {
+            console.log("You lose!")
+            ++computerScore;
+        } else if (humanChoice === "rock" && computerChoice > 0.66) {
+            console.log("You win")
+            ++humanScore;
+        }
+        
+    }
+    
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+playRound(humanSelection, computerSelection);
+console.log("Your score is " + humanScore);
+console.log("Computer score is " + computerScore);

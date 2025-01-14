@@ -49,7 +49,7 @@ const getHumanChoice = function () {
 
 const humanSelection = getHumanChoice()
 const computerSelection = getComputerChoice()
-let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
+
 const playRound = function () {
     if (humanSelection === computerSelection) {
         console.log(tie,)
@@ -64,4 +64,5 @@ const playRound = function () {
 
 
 playRound()
+let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
 console.log(scores)

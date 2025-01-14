@@ -18,51 +18,61 @@ const tie = "It's a tie! Try again!"
 let humanScore = 0;
 let computerScore = 0;
 
-const getComputerChoice = function () {
-    let computerChoice = Math.floor(Math.random()*3)
-        if (computerChoice == 0){
-            computerChoice = choices[0]
-            console.log(choices[0])
-        } else if (computerChoice == 1) {
-            computerChoice = choices[1]
-            console.log(choices[1])
-        } else if (computerChoice == 2) {
-            computerChoice = choices[2]
-            console.log(choices[2]);
+const playGame = function () {
+
+    const getComputerChoice = function () {
+        let computerChoice = Math.floor(Math.random()*3)
+            if (computerChoice == 0){
+                computerChoice = choices[0]
+                console.log(choices[0])
+            } else if (computerChoice == 1) {
+                computerChoice = choices[1]
+                console.log(choices[1])
+            } else if (computerChoice == 2) {
+                computerChoice = choices[2]
+                console.log(choices[2]);
+            }
+        return computerChoice;
+    }
+    const getHumanChoice = function () {
+        let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
+            if (humanChoice === "rock") {
+                humanChoice = choices[0]
+                console.log(choices[0])
+            } else if (humanChoice === "paper") {
+                humanChoice = choices[1]
+                console.log(choices[1])
+            } else if (humanChoice === "scissors") {
+                humanChoice = choices[2]
+                console.log(choices[2]);
+            }   
+        return humanChoice;
+    }
+
+    const humanSelection = getHumanChoice()
+    const computerSelection = getComputerChoice()
+
+    const playRound = function () {
+        if (humanSelection === computerSelection) {
+            console.log(tie,)
+        } else if (humanSelection > computerSelection) {
+            computerScore++
+            console.log(computerWin,)
+        } else if (humanSelection < computerSelection) {
+            humanScore++
+            console.log(humanWin,)
         }
-    return computerChoice;
-}
-const getHumanChoice = function () {
-    let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
-        if (humanChoice === "rock") {
-            humanChoice = choices[0]
-            console.log(choices[0])
-        } else if (humanChoice === "paper") {
-            humanChoice = choices[1]
-            console.log(choices[1])
-        } else if (humanChoice === "scissors") {
-            humanChoice = choices[2]
-            console.log(choices[2]);
-        }   
-    return humanChoice;
+    }
+
+
+    playRound()
+    let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
+    console.log(scores)
 }
 
-const humanSelection = getHumanChoice()
-const computerSelection = getComputerChoice()
-
-const playRound = function () {
-    if (humanSelection === computerSelection) {
-        console.log(tie,)
-    } else if (humanSelection > computerSelection) {
-        computerScore++
-        console.log(computerWin,)
-    } else if (humanSelection < computerSelection) {
-        humanScore++
-        console.log(humanWin,)
+const playFiveGame = function () {
+    for (let i = 1; i<6; i++ ) {
+        playGame()
     }
 }
-
-
-playRound()
-let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
-console.log(scores)
+playFiveGame()

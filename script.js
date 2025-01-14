@@ -25,7 +25,7 @@ const getComputerChoice = function () {
         } else if (computerChoice == 1) {
             computerChoice = choices[1]
             console.log(choices[1])
-        } else if (computerChoice == 2) {
+        } else (computerChoice == 2) {
             computerChoice = choices[2]
             console.log(choices[2]);
         }    
@@ -39,7 +39,7 @@ const getHumanChoice = function () {
         } else if (humanChoice === "paper") {
             humanChoice = choices[1]
             console.log(choices[1])
-        } else if (humanChoice === "scissors") {
+        } else (humanChoice === "scissors") {
             humanChoice = choices[2]
             console.log(choices[2]);
         }    
@@ -51,7 +51,7 @@ const playRound = function (humanChoice, computerChoice) {
         console.log(tie)
     } else if (humanChoice > computerChoice) {
         console.log(computerWin)
-    } else if (humanChoice < computerChoice) {
+    } else (humanChoice < computerChoice) {
         console.log(humanWin)
     }    
 }

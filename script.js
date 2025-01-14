@@ -10,6 +10,7 @@ let choices = [
     Choice.SCISSORS
     ]
 
+
 const humanWin = "You WIN!"
 const computerWin = "The computer win. Try again!"
 const tie = "It's a tie! Try again!"
@@ -46,15 +47,17 @@ const getHumanChoice = function () {
     return humanChoice;
 }
 
-const playRound = function (humanChoice, computerChoice) {
-    if (humanChoice === computerChoice) {
+const humanSelection = getHumanChoice()
+const computerSelection = getComputerChoice()
+
+const playRound = function () {
+    if (humanSelection === computerSelection) {
         console.log(tie)
-    } else if (humanChoice > computerChoice) {
+    } else if (humanSelection > computerSelection) {
         console.log(computerWin)
-    } else if (humanChoice < computerChoice) {
+    } else if (humanSelection < computerSelection) {
         console.log(humanWin)
     }  
 }
-getHumanChoice()
-getComputerChoice()
+
 playRound()

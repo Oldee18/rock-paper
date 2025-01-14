@@ -1,7 +1,7 @@
 const Choice = {
-    ROCK: "rock",
-    PAPER: "paper",
-    SCISSORS: "scissors"
+    ROCK: "ROCK",
+    PAPER: "PAPER",
+    SCISSORS: "SCISSORS"
     }
 
 const choices = [
@@ -14,11 +14,15 @@ const choices = [
 let humanScore = 0;
 let computerScore = 0;
 
-const computerChoice = Math.floor(Math.random()*3);
-console.log(computerChoice)
-
-const humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
-
 const getComputerChoice = function () {
-
+    const computerChoice = Math.floor(Math.random()*3)
+        if (computerChoice == 0){
+            return console.log(choices[0])
+        } else if (computerChoice == 1) {
+            return console.log(choices[1])
+        } else 
+        return console.log(choices[2])
 }
+//const humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
+
+getComputerChoice()

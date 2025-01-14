@@ -23,6 +23,14 @@ const getComputerChoice = function () {
         } else 
         return console.log(choices[2])
 }
-//const humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
-
+const getHumanChoice = function () {
+    const humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
+        if (humanChoice === "rock") {
+            console.log(choices[0])
+        } else if (humanChoice === "paper") {
+            console.log(choices[1])
+        } else 
+            console.log(choices[2])
+}
+getHumanChoice()
 getComputerChoice()

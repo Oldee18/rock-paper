@@ -19,9 +19,9 @@ let humanScore = 0;
 let computerScore = 0;
 
 
-let humanChoice = ""
-  
-    const getHumanChoice = function () {
+let humanChoice = [];
+
+   // const getHumanChoice = function () {
 
         const rockBtn = document.querySelector("#rock")
         const paperBtn = document.querySelector("#paper")
@@ -41,7 +41,7 @@ let humanChoice = ""
             humanChoice = choices[2]
             console.log(choices[2])
             playGame()
-            })
+        })
         /* let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
             if (humanChoice === "rock") {
                 humanChoice = choices[0]
@@ -53,11 +53,10 @@ let humanChoice = ""
                 humanChoice = choices[2]
                 console.log(choices[2]);
             }   */
-        return humanChoice;
-    }
+    //    return humanChoice;
+    //}
 
 const playGame = function () {
-
     const getComputerChoice = function () {
         let computerChoice = Math.floor(Math.random()*3)
             if (computerChoice == 0){
@@ -76,25 +75,22 @@ const playGame = function () {
     const humanSelection = humanChoice
     const computerSelection = getComputerChoice()
 
-    
         if (humanSelection === computerSelection) {
-            console.log(tie,)
+            console.log(tie)
         } else if (humanSelection > computerSelection) {
             computerScore++
-            console.log(computerWin,)
+            console.log(computerWin)
         } else if (humanSelection < computerSelection) {
             humanScore++
-            console.log(humanWin,)
+            console.log(humanWin)
         }
     
-
+        
     let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
     console.log(scores)
-   
-  
 }
 
-getHumanChoice()
+//getHumanChoice()
 
 
 /*const playFiveGame = function () {

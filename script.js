@@ -104,19 +104,26 @@ const playGame = function () {
             divWinner.innerHTML = computerWin
             computerScore++
         }
-    
-        
+    const bestFiveWinner = document.querySelector(".bestfivewinner")
+        const gameOver = "The computer win the game of the best of 5"
+        const playerWin = "You win the game of the best of 5"
+
     let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
     const divScores = document.querySelector(".scores")
     divScores.innerHTML=scores
+
+        if (humanScore === 5) {
+            bestFiveWinner.innerHTML = playerWin
+            humanScore = 0
+            computerScore = 0
+        } else if (computerScore === 5) {
+            bestFiveWinner.innerHTML = gameOver
+            humanScore = 0
+            computerScore = 0
+        }
+
 }
 
 //getHumanChoice()
 
 
-/*const playFiveGame = function () {
-    for (let i = 1; i<6; i++ ) {
-        playGame()
-    }
-}
-playFiveGame() */

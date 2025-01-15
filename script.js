@@ -74,40 +74,41 @@ const playGame = function () {
 
     const humanSelection = humanChoice
     const computerSelection = getComputerChoice()
-
+    const divWinner = document.querySelector(".winner")
         if ((humanSelection === choices[0]) && (computerSelection === choices[0])) {
-            console.log(tie)
+            divWinner.innerHTML = tie
         } else if ((humanSelection === choices[1]) && (computerSelection === choices[1])) {
-            console.log(tie)
+            divWinner.innerHTML = tie
         } else if ((humanSelection === choices[2]) && (computerSelection === choices[2])) {
-            console.log(tie)
+            divWinner.innerHTML = tie
         }
 
         if ((humanSelection === choices[0]) && (computerSelection === choices[2])) {
-            console.log(humanWin)
+            divWinner.innerHTML = humanWin
             humanScore++
         } else if ((humanSelection === choices[1]) && (computerSelection === choices[0])) {
-            console.log(humanWin)
+            divWinner.innerHTML = humanWin
             humanScore++
         } else if ((humanSelection === choices[2]) && (computerSelection === choices[1])) {
-            console.log(humanWin)
+            divWinner.innerHTML = humanWin
             humanScore++
         }
 
         if ((humanSelection === choices[0]) && (computerSelection === choices[1])) {
-            console.log(computerWin)
+            divWinner.innerHTML = computerWin
             computerScore++
         } else if ((humanSelection === choices[1]) && (computerSelection === choices[2])) {
-            console.log(computerWin)
+            divWinner.innerHTML = computerWin
             computerScore++
         } else if ((humanSelection === choices[2]) && (computerSelection === choices[0])) {
-            console.log(computerWin)
+            divWinner.innerHTML = computerWin
             computerScore++
         }
     
         
     let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
-    console.log(scores)
+    const divScores = document.querySelector(".scores")
+    divScores.innerHTML=scores
 }
 
 //getHumanChoice()

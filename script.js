@@ -75,14 +75,34 @@ const playGame = function () {
     const humanSelection = humanChoice
     const computerSelection = getComputerChoice()
 
-        if (humanSelection === computerSelection) {
+        if ((humanSelection === choices[0]) && (computerSelection === choices[0])) {
             console.log(tie)
-        } else if (humanSelection > computerSelection) {
-            computerScore++
-            console.log(computerWin)
-        } else if (humanSelection < computerSelection) {
-            humanScore++
+        } else if ((humanSelection === choices[1]) && (computerSelection === choices[1])) {
+            console.log(tie)
+        } else if ((humanSelection === choices[2]) && (computerSelection === choices[2])) {
+            console.log(tie)
+        }
+
+        if ((humanSelection === choices[0]) && (computerSelection === choices[2])) {
             console.log(humanWin)
+            humanScore++
+        } else if ((humanSelection === choices[1]) && (computerSelection === choices[0])) {
+            console.log(humanWin)
+            humanScore++
+        } else if ((humanSelection === choices[2]) && (computerSelection === choices[1])) {
+            console.log(humanWin)
+            humanScore++
+        }
+
+        if ((humanSelection === choices[0]) && (computerSelection === choices[1])) {
+            console.log(computerWin)
+            computerScore++
+        } else if ((humanSelection === choices[1]) && (computerSelection === choices[2])) {
+            console.log(computerWin)
+            computerScore++
+        } else if ((humanSelection === choices[2]) && (computerSelection === choices[0])) {
+            console.log(computerWin)
+            computerScore++
         }
     
         

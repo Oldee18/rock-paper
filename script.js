@@ -11,7 +11,7 @@ let choices = [
     ]
 
 
-const humanWin = `Te nyertél!`
+const humanWin = `Te nyertél, mert a gép`
 const computerWin = `A gép nyert!`
 const tie = `Döntetlen`
 
@@ -48,13 +48,10 @@ const playGame = function () {
         let computerChoice = Math.floor(Math.random()*3)
             if (computerChoice == 0){
                 computerChoice = choices[0]
-                console.log(choices[0])
             } else if (computerChoice == 1) {
-                computerChoice = choices[1]
-                console.log(choices[1])
+                computerChoice = choices[1]   
             } else if (computerChoice == 2) {
                 computerChoice = choices[2]
-                console.log(choices[2]);
             }
         return computerChoice;
     }

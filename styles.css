@@ -48,8 +48,11 @@ button {
 }
 .bestfivewinner {
     text-align: center;
+    font-size: 5rem;
+    font-weight: bolder;
     margin-top: 4rem;
-}
+    color: greenyellow
+    }
 
 .humanScore, .computerScore {
     text-align: center;

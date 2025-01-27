@@ -1,0 +1,37 @@
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 2rem;
+}
+
+button {
+    width: 6rem;
+    height: 6rem;
+    border-style: none;
+}
+
+#rock {
+    background-image: url(./images/rock.png);
+    background-size: cover;
+}
+
+#paper {
+    background-image: url(./images/paper.png);
+    background-size: cover;
+}
+
+#scissors {
+    background-image: url(./images/scissors.png);
+    background-size: cover;
+}
+
+.scoreContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    gap: 1rem;
+    flex-direction: column;
+}

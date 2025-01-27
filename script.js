@@ -11,9 +11,9 @@ let choices = [
     ]
 
 
-const humanWin = "You WIN!"
-const computerWin = "The computer win. Try again!"
-const tie = "It's a tie! Try again!"
+const humanWin = `Te nyertél!`
+const computerWin = `A gép nyert!`
+const tie = `Döntetlen`
 
 let humanScore = 0;
 let computerScore = 0;
@@ -95,9 +95,14 @@ const playGame = function () {
         const gameOver = "The computer win the game of the best of 5"
         const playerWin = "You win the game of the best of 5"
 
-    let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
+   /* let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
     const divScores = document.querySelector(".scores")
-    divScores.innerHTML=scores
+    divScores.innerHTML=scores */
+
+    const humanScr = document.querySelector(".humanScore")
+        humanScr.innerHTML = `A te pontszámod : ${humanScore}`
+    const computerScr = document.querySelector(".computerScore")
+        computerScr.innerHTML = `A gép pontszáma : ${computerScore}`
 
         if (humanScore === 5) {
             bestFiveWinner.innerHTML = playerWin

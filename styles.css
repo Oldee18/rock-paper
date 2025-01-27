@@ -35,3 +35,7 @@ button {
     gap: 1rem;
     flex-direction: column;
 }
+
+.scores {
+    background-color: aquamarine;
+}

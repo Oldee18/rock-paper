@@ -42,19 +42,6 @@ let humanChoice = [];
             console.log(choices[2])
             playGame()
         })
-        /* let humanChoice = prompt("Do you choose rock, paper or scissors?").toLocaleLowerCase();
-            if (humanChoice === "rock") {
-                humanChoice = choices[0]
-                console.log(choices[0])
-            } else if (humanChoice === "paper") {
-                humanChoice = choices[1]
-                console.log(choices[1])
-            } else if (humanChoice === "scissors") {
-                humanChoice = choices[2]
-                console.log(choices[2]);
-            }   */
-    //    return humanChoice;
-    //}
 
 const playGame = function () {
     const getComputerChoice = function () {

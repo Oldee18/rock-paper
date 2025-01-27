@@ -92,17 +92,13 @@ const playGame = function () {
             computerScore++
         }
     const bestFiveWinner = document.querySelector(".bestfivewinner")
-        const gameOver = "The computer win the game of the best of 5"
-        const playerWin = "You win the game of the best of 5"
-
-   /* let scores = `You have ${humanScore} score, and the computer have ${computerScore}`
-    const divScores = document.querySelector(".scores")
-    divScores.innerHTML=scores */
+        const gameOver = `A gép nyert, mert hamarabb elérte az 5 pontszámot. Probáld újra!`
+        const playerWin = `NYERTÉL!!! Gratulálunk!`
 
     const humanScr = document.querySelector(".humanScore")
-        humanScr.innerHTML = `A te pontszámod : ${humanScore}`
+        humanScr.innerHTML = `A te pontszámod: <br>${humanScore}`
     const computerScr = document.querySelector(".computerScore")
-        computerScr.innerHTML = `A gép pontszáma : ${computerScore}`
+        computerScr.innerHTML = `A gép pontszáma: <br>${computerScore}`
 
         if (humanScore === 5) {
             bestFiveWinner.innerHTML = playerWin

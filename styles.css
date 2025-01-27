@@ -1,3 +1,6 @@
+* {
+   /* border: 2px solid red; */
+}
 .buttonContainer {
     display: flex;
     justify-content: center;
@@ -29,13 +32,27 @@ button {
 
 .scoreContainer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     margin-top: 5rem;
     gap: 1rem;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.scores {
-    background-color: aquamarine;
+.winner {
+    display: flex;
+    color: red;
+    font-size: 5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+.bestfivewinner {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.humanScore, .computerScore {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
 }

@@ -11,7 +11,7 @@ let choices = [
     ]
 
 
-const humanWin = `Te nyertél, mert a gép`
+const humanWin = `Te nyertél!`
 const computerWin = `A gép nyert!`
 const tie = `Döntetlen`
 
@@ -20,8 +20,6 @@ let computerScore = 0;
 
 
 let humanChoice = [];
-
-   // const getHumanChoice = function () {
 
         const rockBtn = document.querySelector("#rock")
         const paperBtn = document.querySelector("#paper")
@@ -108,7 +106,3 @@ const playGame = function () {
         }
 
 }
-
-//getHumanChoice()
-
-
